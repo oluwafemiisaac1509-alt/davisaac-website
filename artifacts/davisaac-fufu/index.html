@@ -1,0 +1,415 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DAVISAAC | Odourless Fufu Powder — Real taste, zero smell</title>
+  <meta name="description" content="Davisaac Odourless Fufu Powder. Real taste, zero smell. Boil, stir, serve. Order on WhatsApp in Ogun State, Nigeria.">
+  <meta name="theme-color" content="#123b2b">
+  <style>
+    :root {
+      color-scheme: light;
+      --forest: #123b2b;
+      --forest-deep: #0a2b1f;
+      --leaf: #367755;
+      --sage: #edf2e9;
+      --cream: #f8f8f1;
+      --paper: #fffefa;
+      --ink: #23362c;
+      --muted: #69776d;
+      --line: #dce4d9;
+      --serif: Georgia, "Times New Roman", serif;
+      --sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --shadow: 0 16px 42px rgba(18, 59, 43, .09);
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 88px; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font: 16px/1.65 var(--sans); }
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; }
+    button, input, select, textarea { font: inherit; }
+    button, a, input, select, textarea { -webkit-tap-highlight-color: transparent; }
+    :focus-visible { outline: 3px solid #d6b864; outline-offset: 4px; }
+    .wrap { width: min(1120px, calc(100% - 40px)); margin-inline: auto; }
+    .eyebrow { display: flex; align-items: center; gap: 10px; color: var(--leaf); font-size: .72rem; font-weight: 750; letter-spacing: .16em; text-transform: uppercase; }
+    .eyebrow::before { content: ""; width: 24px; height: 1px; background: currentColor; }
+    .section { padding: 76px 0; }
+    .section-head { max-width: 680px; margin: 0 auto 35px; text-align: center; }
+    .section-head .eyebrow { justify-content: center; }
+    h2 { margin: 10px 0 12px; color: var(--forest); font: 500 clamp(2rem, 5vw, 3rem)/1.12 var(--serif); letter-spacing: -.035em; }
+    .section-intro { color: var(--muted); margin: 0; }
+
+    /* A restrained market-green identity, with an editorial serif counterpoint. */
+    .site-header { position: sticky; z-index: 20; top: 0; border-bottom: 1px solid rgba(255,255,255,.12); background: var(--forest); color: #fff; }
+    .nav { min-height: 74px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { display: inline-flex; align-items: center; gap: 11px; font-weight: 800; letter-spacing: .13em; font-size: .94rem; }
+    .brand-mark { display: grid; place-items: center; width: 35px; height: 35px; border: 1px solid rgba(255,255,255,.43); border-radius: 50%; font: 600 1rem var(--serif); letter-spacing: 0; }
+    .nav-menu { position: absolute; display: none; left: 0; right: 0; top: 100%; padding: 8px 20px 18px; background: var(--forest); flex-direction: column; gap: 0; }
+    .nav-menu.open { display: flex; }
+    .nav-menu a { padding: 12px 0; border-top: 1px solid rgba(255,255,255,.13); color: rgba(255,255,255,.88); font-size: .92rem; }
+    .nav-menu a:hover { color: white; }
+    .site-header .nav-order { display: none; }
+    .menu-toggle { width: 44px; height: 44px; display: grid; place-items: center; border: 1px solid rgba(255,255,255,.28); border-radius: 50%; color: #fff; background: transparent; cursor: pointer; }
+    .menu-toggle span, .menu-toggle::before, .menu-toggle::after { content: ""; display: block; width: 17px; height: 1.5px; background: currentColor; }
+    .menu-toggle span { margin: 4px 0; }
+
+    .hero { position: relative; isolation: isolate; min-height: 555px; overflow: hidden; display: grid; align-items: center; color: white; background: var(--forest-deep) url("images/hero.jpg") center 48% / cover no-repeat; }
+    .hero::before { position: absolute; z-index: -1; inset: 0; content: ""; background: linear-gradient(90deg, rgba(7,37,26,.92) 0%, rgba(10,43,30,.79) 48%, rgba(10,43,30,.5) 100%); }
+    .hero::after { position: absolute; z-index: -1; inset: auto 0 0; height: 120px; content: ""; background: linear-gradient(transparent, rgba(5,30,20,.16)); }
+    .hero-content { padding: 72px 0 86px; max-width: 740px; }
+    .hero .eyebrow { color: #cadbbf; }
+    .hero h1 { max-width: 710px; margin: 19px 0 18px; font: 500 clamp(3.3rem, 9vw, 6.35rem)/.99 var(--serif); letter-spacing: -.055em; }
+    .hero h1 em { color: #d6e0bf; font-weight: 400; }
+    .hero-copy { margin: 0 0 30px; color: rgba(255,255,255,.84); font-size: clamp(1rem, 2.4vw, 1.18rem); }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+    .button { display: inline-flex; align-items: center; justify-content: center; min-height: 51px; padding: 0 23px; border: 1px solid transparent; border-radius: 3px; cursor: pointer; font-weight: 700; transition: transform .18s ease, background .18s ease; }
+    .button:hover { transform: translateY(-2px); }
+    .button-primary { color: white; background: var(--leaf); }
+    .button-primary:hover { background: #2c6648; }
+    .button-quiet { border-color: rgba(255,255,255,.53); color: white; background: transparent; }
+    .button-quiet:hover { background: rgba(255,255,255,.1); }
+    .hero-note { display: flex; align-items: center; gap: 9px; margin-top: 37px; color: rgba(255,255,255,.75); font-size: .84rem; }
+    .hero-note::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: #d6e0bf; }
+
+    .reasons { padding: 28px 0; border-bottom: 1px solid var(--line); background: var(--paper); }
+    .reason-row { display: grid; grid-template-columns: 1fr; gap: 17px; }
+    .reason { display: flex; gap: 14px; align-items: center; }
+    .reason-index { color: #91a38f; font: 1rem var(--serif); }
+    .reason strong { display: block; color: var(--forest); font-size: .93rem; }
+    .reason span:last-child { color: var(--muted); font-size: .83rem; }
+
+    .products-section { background: var(--cream); }
+    .product-grid { display: grid; gap: 20px; max-width: 850px; margin: 0 auto; }
+    .product-card { display: grid; grid-template-columns: 34% 1fr; min-height: 195px; overflow: hidden; border: 1px solid #e6e9df; background: var(--paper); box-shadow: 0 8px 26px rgba(18,59,43,.045); }
+    .product-visual { position: relative; min-height: 195px; overflow: hidden; display: grid; place-items: center; background: #e9eee4; }
+    .product-visual::before { content: ""; position: absolute; width: 150px; height: 150px; border: 1px solid rgba(18,59,43,.14); border-radius: 50%; }
+    .product-visual img { position: relative; z-index: 1; width: 100%; height: 100%; min-height: 195px; object-fit: cover; }
+    .pack-fallback { position: absolute; inset: 0; display: grid; place-items: center; }
+    .pack-shape { position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; width: 87px; height: 119px; border: 1px solid #d8dfd2; background: #fffef9; box-shadow: 0 12px 23px rgba(18,59,43,.11); color: var(--forest); transform: rotate(-3deg); }
+    .pack-shape::before { position: absolute; top: 0; left: 0; right: 0; height: 9px; content: ""; background: var(--forest); }
+    .pack-brand { margin-top: 6px; font-weight: 800; font-size: .47rem; letter-spacing: .12em; }
+    .pack-label { margin-top: 11px; text-align: center; font: 1.03rem/.95 var(--serif); }
+    .pack-size { margin-top: 8px; color: var(--muted); font-size: .55rem; }
+    .product-info { display: flex; flex-direction: column; align-items: flex-start; justify-content: center; padding: 20px 17px; }
+    .product-info .eyebrow { font-size: .61rem; letter-spacing: .12em; }
+    .product-info h3 { margin: 8px 0 2px; color: var(--forest); font: 500 clamp(1.15rem, 4vw, 1.6rem)/1.2 var(--serif); }
+    .price { margin: 2px 0 15px; color: var(--leaf); font-size: 1.2rem; font-weight: 750; }
+    .product-info .button { min-height: 43px; padding-inline: 17px; font-size: .89rem; }
+
+    .prepare-section { background: white; }
+    .prepare-layout { display: grid; gap: 36px; align-items: start; }
+    .prepare-intro { max-width: 340px; }
+    .prepare-intro h2 { text-align: left; }
+    .prepare-intro .eyebrow { justify-content: flex-start; }
+    .steps { list-style: none; margin: 0; padding: 0; counter-reset: prep; border-top: 1px solid var(--line); }
+    .steps li { counter-increment: prep; display: grid; grid-template-columns: 43px 1fr; align-items: baseline; gap: 12px; padding: 15px 0; border-bottom: 1px solid var(--line); }
+    .steps li::before { content: "0" counter(prep); color: var(--leaf); font: 1.02rem var(--serif); }
+    .steps li span { color: var(--ink); }
+
+    .delivery-section { background: var(--sage); }
+    .delivery-panel { display: grid; gap: 25px; align-items: center; padding: 28px; border-left: 3px solid var(--leaf); background: rgba(255,255,255,.66); }
+    .delivery-panel h2 { margin-top: 8px; }
+    .delivery-copy p { margin: 0 0 12px; color: #536359; }
+    .delivery-note { padding: 17px 18px; border: 1px solid #dce4d9; color: var(--forest); font-size: .91rem; }
+
+    .about-section { background: var(--paper); }
+    .about-layout { display: grid; gap: 26px; align-items: start; }
+    .about-heading h2 { max-width: 400px; text-align: left; }
+    .about-heading .eyebrow { justify-content: flex-start; }
+    .about-copy { padding-top: 5px; color: #536359; }
+    .about-copy p { margin: 0 0 16px; }
+    .about-copy p:first-child { color: var(--forest); font-size: 1.09rem; }
+
+    .order-section { position: relative; background: var(--forest); color: white; }
+    .order-section h2 { color: white; }
+    .order-section .section-head .eyebrow { color: #c6d6bb; }
+    .order-section .section-intro { color: rgba(255,255,255,.72); }
+    .order-layout { display: grid; gap: 30px; align-items: start; }
+    .order-aside { color: rgba(255,255,255,.76); }
+    .order-aside h3 { margin: 0 0 10px; color: white; font: 500 1.55rem var(--serif); }
+    .order-aside p { margin: 0 0 14px; }
+    .order-aside .order-route { display: inline-flex; align-items: center; gap: 9px; margin-top: 10px; color: #d1deca; font-size: .87rem; }
+    .order-route::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: #d1deca; }
+    .order-form { padding: 24px; color: var(--ink); background: var(--paper); box-shadow: 0 16px 44px rgba(0,0,0,.12); }
+    .field { margin-bottom: 15px; }
+    .field label { display: block; margin: 0 0 6px; color: var(--forest); font-size: .88rem; font-weight: 700; }
+    .field input, .field select, .field textarea { display: block; width: 100%; min-height: 48px; padding: 11px 12px; border: 1px solid #cbd6cb; border-radius: 2px; background: #fff; color: var(--ink); }
+    .field textarea { min-height: 90px; resize: vertical; }
+    .field input::placeholder, .field textarea::placeholder { color: #87938a; }
+    .order-form .button { width: 100%; min-height: 52px; }
+    .form-note { margin: 12px 0 0; text-align: center; color: var(--muted); font-size: .78rem; }
+    .form-status { min-height: 1.4em; margin: 9px 0 0; text-align: center; color: #a53e2b; font-size: .85rem; }
+    .footer { padding: 25px 0 88px; background: var(--forest-deep); color: rgba(255,255,255,.7); font-size: .83rem; }
+    .footer-inner { display: flex; flex-direction: column; gap: 5px; }
+    .footer strong { color: white; letter-spacing: .1em; }
+    .mobile-order { position: fixed; z-index: 19; left: 14px; right: 14px; bottom: 14px; display: flex; align-items: center; justify-content: center; min-height: 52px; border: 1px solid rgba(255,255,255,.2); border-radius: 4px; background: #215d3e; color: white; font-size: .94rem; font-weight: 750; box-shadow: 0 8px 28px rgba(7,37,26,.28); }
+
+    @media (min-width: 620px) {
+      .wrap { width: min(1120px, calc(100% - 64px)); }
+      .section { padding: 96px 0; }
+      .reason-row { grid-template-columns: repeat(3, 1fr); gap: 25px; }
+      .product-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; }
+      .product-card { display: flex; flex-direction: column; }
+      .product-visual, .product-visual img { height: 260px; min-height: 260px; }
+      .product-visual::before { width: 195px; height: 195px; }
+      .pack-shape { width: 110px; height: 158px; }
+      .pack-brand { font-size: .58rem; }
+      .pack-label { font-size: 1.3rem; }
+      .pack-size { font-size: .68rem; }
+      .product-info { min-height: 190px; padding: 24px; }
+      .product-info .button { margin-top: auto; }
+      .prepare-layout { grid-template-columns: .75fr 1.25fr; gap: 70px; }
+      .delivery-panel { grid-template-columns: 1fr .75fr; padding: 38px 42px; }
+      .about-layout { grid-template-columns: .8fr 1.2fr; gap: 70px; }
+      .order-layout { grid-template-columns: .78fr 1fr; gap: 75px; }
+      .order-form { padding: 32px; }
+      .footer { padding-bottom: 25px; }
+      .footer-inner { flex-direction: row; justify-content: space-between; align-items: center; }
+      .mobile-order { display: none; }
+    }
+    @media (min-width: 768px) {
+      .nav-menu { position: static; display: flex; flex-direction: row; align-items: center; gap: 25px; padding: 0; background: transparent; }
+      .nav-menu a { padding: 0; border: 0; color: rgba(255,255,255,.8); font-size: .85rem; }
+      .nav-menu a:hover { color: #fff; }
+      .menu-toggle { display: none; }
+      .site-header .nav-order { display: inline-flex; min-height: 39px; padding: 0 15px; border: 1px solid rgba(255,255,255,.48); font-size: .8rem; }
+      .nav { justify-content: flex-start; }
+      .nav-menu { margin-left: auto; }
+    }
+    @media (max-width: 390px) {
+      .wrap { width: calc(100% - 32px); }
+      .hero { min-height: 510px; }
+      .hero h1 { font-size: clamp(3rem, 14vw, 3.5rem); }
+      .product-card { grid-template-columns: 31% 1fr; }
+      .product-visual, .product-visual img { min-height: 184px; }
+      .product-info { padding: 15px 13px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="brand" href="#top" aria-label="Davisaac home"><span class="brand-mark" aria-hidden="true">D</span><span>DAVISAAC</span></a>
+      <button class="menu-toggle" id="menuBtn" type="button" aria-label="Open navigation menu" aria-controls="navLinks" aria-expanded="false"><span></span></button>
+      <nav class="nav-menu" id="navLinks" aria-label="Main navigation">
+        <a href="#products">Products</a>
+        <a href="#how">How to prepare</a>
+        <a href="#delivery">Delivery</a>
+        <a href="#about">About</a>
+        <a href="#order">Order</a>
+      </nav>
+      <a href="#order" class="nav-order button button-quiet">Order on WhatsApp</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="wrap">
+        <div class="hero-content">
+          <div class="eyebrow">Davisaac Odourless Fufu Powder</div>
+          <h1 id="hero-title">Real taste,<br><em>zero smell.</em></h1>
+          <p class="hero-copy">Davisaac Odourless Fufu Powder. Boil, stir, serve.</p>
+          <div class="hero-actions">
+            <a href="#order" class="button button-primary">Order now <span aria-hidden="true">&nbsp;→</span></a>
+            <a href="#products" class="button button-quiet">See products</a>
+          </div>
+          <div class="hero-note">Made and packaged in Ogun State, Nigeria</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="reasons" aria-label="Why choose Davisaac">
+      <div class="wrap reason-row">
+        <div class="reason"><span class="reason-index">01</span><div><strong>Zero smell</strong><span>No strong cassava smell in your kitchen.</span></div></div>
+        <div class="reason"><span class="reason-index">02</span><div><strong>Real taste</strong><span>Smooth, good-tasting fufu that our customers enjoy.</span></div></div>
+        <div class="reason"><span class="reason-index">03</span><div><strong>Make it your way</strong><span>You prepare it yourself, with the soup you love.</span></div></div>
+      </div>
+    </section>
+
+    <section class="section products-section" id="products">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">Choose your pack</div>
+          <h2>Our products</h2>
+        </div>
+        <div class="product-grid">
+          <article class="product-card">
+            <div class="product-visual">
+              <div class="pack-fallback" aria-hidden="true"><div class="pack-shape"><span class="pack-brand">DAVISAAC</span><span class="pack-label">Odourless<br>Fufu Powder</span><span class="pack-size">1kg pack</span></div></div>
+              <img src="images/1kg.jpg" alt="Davisaac Odourless Fufu Powder 1kg pack" loading="lazy" onerror="this.hidden=true">
+            </div>
+            <div class="product-info">
+              <div class="eyebrow">Everyday pack</div>
+              <h3>Odourless Fufu Powder 1kg</h3>
+              <div class="price">₦1,500</div>
+              <button class="button button-primary" type="button" data-pick="1kg">Order this pack <span aria-hidden="true">&nbsp;→</span></button>
+            </div>
+          </article>
+          <article class="product-card">
+            <div class="product-visual">
+              <div class="pack-fallback" aria-hidden="true"><div class="pack-shape"><span class="pack-brand">DAVISAAC</span><span class="pack-label">Odourless<br>Fufu Powder</span><span class="pack-size">2kg pack</span></div></div>
+              <img src="images/2kg.jpg" alt="Davisaac Odourless Fufu Powder 2kg pack" loading="lazy" onerror="this.hidden=true">
+            </div>
+            <div class="product-info">
+              <div class="eyebrow">Family pack</div>
+              <h3>Odourless Fufu Powder 2kg</h3>
+              <div class="price">₦3,000</div>
+              <button class="button button-primary" type="button" data-pick="2kg">Order this pack <span aria-hidden="true">&nbsp;→</span></button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section prepare-section" id="how">
+      <div class="wrap prepare-layout">
+        <div class="prepare-intro">
+          <div class="eyebrow">Simple preparation</div>
+          <h2>How to prepare</h2>
+          <p class="section-intro">A few simple steps, then serve with the soup you love.</p>
+        </div>
+        <ol class="steps">
+          <li><span>Boil water to boiling point.</span></li>
+          <li><span>Pour the boiling water into a container.</span></li>
+          <li><span>Add the required amount of powder to the water.</span></li>
+          <li><span>Stir until smooth.</span></li>
+          <li><span>Serve with your favourite soup.</span></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section delivery-section" id="delivery">
+      <div class="wrap">
+        <div class="delivery-panel">
+          <div class="delivery-copy">
+            <div class="eyebrow">A straightforward handover</div>
+            <h2>Delivery</h2>
+            <p>We deliver in person. After you order, we agree on a meeting place that is convenient for both of us.</p>
+            <p>Please tell us your area when you order.</p>
+          </div>
+          <div class="delivery-note">Not in our area? Send us a message and we will talk about what is possible.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section about-section" id="about">
+      <div class="wrap about-layout">
+        <div class="about-heading">
+          <div class="eyebrow">A little about us</div>
+          <h2>Open about what goes in your kitchen.</h2>
+        </div>
+        <div class="about-copy">
+          <p>Davisaac Enterprises produces and packages odourless fufu powder in Ogun State, Nigeria.</p>
+          <p>We believe in being open with our customers. The ingredient, the preparation steps and the nutritional information are all printed on the pack, so you know exactly what you are buying.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section order-section" id="order">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">A few details and you're set</div>
+          <h2>Order on WhatsApp</h2>
+          <p class="section-intro">Tell us what you need and where you are. Your order will be ready to send.</p>
+        </div>
+        <div class="order-layout">
+          <div class="order-aside">
+            <h3>Let's arrange your order.</h3>
+            <p>We deliver in person and agree on a meeting place that works for both of us. Please include your area so we can talk through the details.</p>
+            <span class="order-route">Ogun State, Nigeria</span>
+          </div>
+          <form class="order-form" id="orderForm">
+            <div class="field">
+              <label for="name">Your name</label>
+              <input type="text" id="name" name="name" autocomplete="name" required>
+            </div>
+            <div class="field">
+              <label for="area">Your area</label>
+              <input type="text" id="area" name="area" placeholder="Where can we meet you?" required>
+            </div>
+            <div class="field">
+              <label for="product">Product</label>
+              <select id="product" name="product">
+                <option value="1kg" data-price="1500">Odourless Fufu Powder 1kg - ₦1,500</option>
+                <option value="2kg" data-price="3000">Odourless Fufu Powder 2kg - ₦3,000</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="qty">How many packs?</label>
+              <input type="number" id="qty" name="qty" min="1" value="1" required>
+            </div>
+            <div class="field">
+              <label for="note">Anything else? (optional)</label>
+              <textarea id="note" name="note" rows="3"></textarea>
+            </div>
+            <button type="submit" class="button button-primary">Send order on WhatsApp <span aria-hidden="true">&nbsp;→</span></button>
+            <p class="form-note">This opens WhatsApp with your order already written. Just press send.</p>
+            <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner"><strong>DAVISAAC</strong><span>© 2026 Davisaac Enterprises. All rights reserved.</span></div>
+  </footer>
+  <a class="mobile-order" href="#order">Order on WhatsApp <span aria-hidden="true">&nbsp;→</span></a>
+
+  <script>
+    // Use the international format, with no + sign and no spaces. Example: 2348012345678
+    const WHATSAPP_NUMBER = "234XXXXXXXXXX";
+
+    const menuBtn = document.getElementById("menuBtn");
+    const navLinks = document.getElementById("navLinks");
+    menuBtn.addEventListener("click", function () {
+      const isOpen = navLinks.classList.toggle("open");
+      menuBtn.setAttribute("aria-expanded", String(isOpen));
+      menuBtn.setAttribute("aria-label", isOpen ? "Close navigation menu" : "Open navigation menu");
+    });
+    navLinks.querySelectorAll("a").forEach(function (link) {
+      link.addEventListener("click", function () {
+        navLinks.classList.remove("open");
+        menuBtn.setAttribute("aria-expanded", "false");
+        menuBtn.setAttribute("aria-label", "Open navigation menu");
+      });
+    });
+
+    document.querySelectorAll("[data-pick]").forEach(function (button) {
+      button.addEventListener("click", function () {
+        document.getElementById("product").value = button.dataset.pick;
+        document.getElementById("order").scrollIntoView({ behavior: "smooth" });
+        document.getElementById("name").focus({ preventScroll: true });
+      });
+    });
+
+    document.getElementById("orderForm").addEventListener("submit", function (event) {
+      event.preventDefault();
+      const status = document.getElementById("formStatus");
+      if (WHATSAPP_NUMBER.includes("X")) {
+        status.textContent = "Add your WhatsApp number in the script first (WHATSAPP_NUMBER).";
+        return;
+      }
+      const name = document.getElementById("name").value.trim();
+      const area = document.getElementById("area").value.trim();
+      const qty = Math.max(1, parseInt(document.getElementById("qty").value, 10) || 1);
+      const note = document.getElementById("note").value.trim();
+      const select = document.getElementById("product");
+      const option = select.options[select.selectedIndex];
+      const total = parseInt(option.dataset.price, 10) * qty;
+      let message = "Hello Davisaac, I would like to order:\n" +
+        "Product: Odourless Fufu Powder " + select.value + "\n" +
+        "Quantity: " + qty + "\n" +
+        "Total: ₦" + total.toLocaleString() + "\n" +
+        "Name: " + name + "\n" +
+        "My area: " + area;
+      if (note) message += "\nNote: " + note;
+      const url = "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(message);
+      window.open(url, "_blank", "noopener,noreferrer");
+    });
+  </script>
+</body>
+</html>

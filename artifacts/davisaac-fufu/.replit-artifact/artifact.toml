@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "Davisaac Fufu Powder"
+description = "A responsive product website for Davisaac Odourless Fufu Powder, with product details, preparation and delivery information, and a WhatsApp order form."
+version = "1.0.0"
+id = "artifacts/davisaac-fufu"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 26081
+
+[services.development]
+run = "pnpm --filter @workspace/davisaac-fufu run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/davisaac-fufu", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/davisaac-fufu/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "26081"
+BASE_PATH = "/"
