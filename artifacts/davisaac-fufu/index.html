@@ -83,7 +83,7 @@
     .product-card { display: grid; grid-template-columns: 34% 1fr; min-height: 195px; overflow: hidden; border: 1px solid #e6e9df; background: var(--paper); box-shadow: 0 8px 26px rgba(18,59,43,.045); }
     .product-visual { position: relative; min-height: 195px; overflow: hidden; display: grid; place-items: center; background: #e9eee4; }
     .product-visual::before { content: ""; position: absolute; width: 150px; height: 150px; border: 1px solid rgba(18,59,43,.14); border-radius: 50%; }
-    .product-visual img { position: relative; z-index: 1; width: 100%; height: 100%; min-height: 195px; object-fit: cover; }
+    .product-visual img { position: relative; z-index: 1; width: 100%; height: 100%; min-height: 195px; object-fit: contain; background: #e9eee4; }
     .pack-fallback { position: absolute; inset: 0; display: grid; place-items: center; }
     .pack-shape { position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; width: 87px; height: 119px; border: 1px solid #d8dfd2; background: #fffef9; box-shadow: 0 12px 23px rgba(18,59,43,.11); color: var(--forest); transform: rotate(-3deg); }
     .pack-shape::before { position: absolute; top: 0; left: 0; right: 0; height: 9px; content: ""; background: var(--forest); }
