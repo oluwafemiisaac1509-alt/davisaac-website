@@ -43,7 +43,7 @@
     .site-header { position: sticky; z-index: 20; top: 0; border-bottom: 1px solid rgba(255,255,255,.12); background: var(--forest); color: #fff; }
     .nav { min-height: 74px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
     .brand { display: inline-flex; align-items: center; gap: 11px; font-weight: 800; letter-spacing: .13em; font-size: .94rem; }
-    .brand-mark { display: grid; place-items: center; width: 35px; height: 35px; border: 1px solid rgba(255,255,255,.43); border-radius: 50%; font: 600 1rem var(--serif); letter-spacing: 0; }
+    .brand-logo { flex: none; width: 48px; height: 48px; overflow: hidden; border-radius: 50%; background: #f8f3e7; object-fit: cover; }
     .nav-menu { position: absolute; display: none; left: 0; right: 0; top: 100%; padding: 8px 20px 18px; background: var(--forest); flex-direction: column; gap: 0; }
     .nav-menu.open { display: flex; }
     .nav-menu a { padding: 12px 0; border-top: 1px solid rgba(255,255,255,.13); color: rgba(255,255,255,.88); font-size: .92rem; }
@@ -141,7 +141,8 @@
     .form-status { min-height: 1.4em; margin: 9px 0 0; text-align: center; color: #a53e2b; font-size: .85rem; }
     .footer { padding: 25px 0 88px; background: var(--forest-deep); color: rgba(255,255,255,.7); font-size: .83rem; }
     .footer-inner { display: flex; flex-direction: column; gap: 5px; }
-    .footer strong { color: white; letter-spacing: .1em; }
+    .footer-brand { display: inline-flex; align-items: center; gap: 10px; color: white; letter-spacing: .1em; }
+    .footer-brand img { width: 34px; height: 34px; overflow: hidden; border-radius: 50%; background: #f8f3e7; object-fit: cover; }
     .mobile-order { position: fixed; z-index: 19; left: 14px; right: 14px; bottom: 14px; display: flex; align-items: center; justify-content: center; min-height: 52px; border: 1px solid rgba(255,255,255,.2); border-radius: 4px; background: #215d3e; color: white; font-size: .94rem; font-weight: 750; box-shadow: 0 8px 28px rgba(7,37,26,.28); }
 
     @media (min-width: 620px) {
@@ -192,7 +193,7 @@
 <body>
   <header class="site-header">
     <div class="wrap nav">
-      <a class="brand" href="#top" aria-label="Davisaac home"><span class="brand-mark" aria-hidden="true">D</span><span>DAVISAAC</span></a>
+      <a class="brand" href="#top" aria-label="Davisaac Enterprise home"><img class="brand-logo" src="images/logo.webp" alt=""><span>DAVISAAC</span></a>
       <button class="menu-toggle" id="menuBtn" type="button" aria-label="Open navigation menu" aria-controls="navLinks" aria-expanded="false"><span></span></button>
       <nav class="nav-menu" id="navLinks" aria-label="Main navigation">
         <a href="#products">Products</a>
@@ -355,13 +356,13 @@
   </main>
 
   <footer class="footer">
-    <div class="wrap footer-inner"><strong>DAVISAAC</strong><span>© 2026 Davisaac Enterprises. All rights reserved.</span></div>
+    <div class="wrap footer-inner"><strong class="footer-brand"><img src="images/logo.webp" alt="">DAVISAAC</strong><span>© 2026 Davisaac Enterprises. All rights reserved.</span></div>
   </footer>
   <a class="mobile-order" href="#order">Order on WhatsApp <span aria-hidden="true">&nbsp;→</span></a>
 
   <script>
     // Use the international format, with no + sign and no spaces. Example: 2348012345678
-    const WHATSAPP_NUMBER = "234XXXXXXXXXX";
+    const WHATSAPP_NUMBER = "2348056651688";
 
     const menuBtn = document.getElementById("menuBtn");
     const navLinks = document.getElementById("navLinks");
