@@ -4,8 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>DAVISAAC | Odourless Fufu Powder — Real taste, zero smell</title>
-  <meta name="description" content="Davisaac Odourless Fufu Powder. Real taste, zero smell. Boil, stir, serve. Order on WhatsApp in Ogun State, Nigeria.">
+  <meta name="description" content="Davisaac Odourless Fufu Powder. Real taste, zero smell. Boil, stir, serve. Order on WhatsApp.">
   <meta name="theme-color" content="#123b2b">
+  <link rel="preload" as="image" href="images/hero.jpg">
   <style>
     :root {
       color-scheme: light;
@@ -15,8 +16,8 @@
       --sage: #edf2e9;
       --cream: #f8f8f1;
       --paper: #fffefa;
-      --ink: #23362c;
-      --muted: #69776d;
+      --ink: #1b2c22;
+      --muted: #4f5c52;
       --line: #dce4d9;
       --serif: Georgia, "Times New Roman", serif;
       --sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -68,9 +69,6 @@
     .button-primary:hover { background: #2c6648; }
     .button-quiet { border-color: rgba(255,255,255,.53); color: white; background: transparent; }
     .button-quiet:hover { background: rgba(255,255,255,.1); }
-    .hero-note { display: flex; align-items: center; gap: 9px; margin-top: 37px; color: rgba(255,255,255,.75); font-size: .84rem; }
-    .hero-note::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: #d6e0bf; }
-
     .reasons { padding: 28px 0; border-bottom: 1px solid var(--line); background: var(--paper); }
     .reason-row { display: grid; grid-template-columns: 1fr; gap: 17px; }
     .reason { display: flex; gap: 14px; align-items: center; }
@@ -127,9 +125,6 @@
     .order-layout { display: grid; gap: 30px; align-items: start; }
     .order-aside { color: rgba(255,255,255,.76); }
     .order-aside h3 { margin: 0 0 10px; color: white; font: 500 1.55rem var(--serif); }
-    .order-aside p { margin: 0 0 14px; }
-    .order-aside .order-route { display: inline-flex; align-items: center; gap: 9px; margin-top: 10px; color: #d1deca; font-size: .87rem; }
-    .order-route::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: #d1deca; }
     .order-form { padding: 24px; color: var(--ink); background: var(--paper); box-shadow: 0 16px 44px rgba(0,0,0,.12); }
     .field { margin-bottom: 15px; }
     .field label { display: block; margin: 0 0 6px; color: var(--forest); font-size: .88rem; font-weight: 700; }
@@ -177,6 +172,14 @@
       .nav { justify-content: flex-start; }
       .nav-menu { margin-left: auto; }
     }
+    @media (max-width: 619px) {
+      body { color: var(--ink); font-size: 17px; line-height: 1.7; }
+      .hero-copy { font-size: 1.0625rem; }
+      .reason span:last-child { font-size: .92rem; }
+      .field label { font-size: .95rem; }
+      .form-note, .form-status { font-size: .9rem; }
+      .footer { font-size: .9rem; }
+    }
     @media (max-width: 390px) {
       .wrap { width: calc(100% - 32px); }
       .hero { min-height: 510px; }
@@ -217,7 +220,6 @@
             <a href="#order" class="button button-primary">Order now <span aria-hidden="true">&nbsp;→</span></a>
             <a href="#products" class="button button-quiet">See products</a>
           </div>
-          <div class="hero-note">Made and packaged in Ogun State, Nigeria</div>
         </div>
       </div>
     </section>
@@ -300,7 +302,7 @@
       <div class="wrap about-layout">
         <div class="about-heading">
           <div class="eyebrow">A little about us</div>
-          <h2>Open about what goes in your kitchen.</h2>
+          <h2>Open about what's in every pack.</h2>
         </div>
         <div class="about-copy">
           <p>Davisaac Enterprises produces and packages odourless fufu powder in Ogun State, Nigeria.</p>
@@ -319,8 +321,6 @@
         <div class="order-layout">
           <div class="order-aside">
             <h3>Let's arrange your order.</h3>
-            <p>We deliver in person and agree on a meeting place that works for both of us. Please include your area so we can talk through the details.</p>
-            <span class="order-route">Ogun State, Nigeria</span>
           </div>
           <form class="order-form" id="orderForm">
             <div class="field">
