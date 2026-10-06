@@ -201,6 +201,314 @@
     @media (prefers-reduced-motion: reduce) {
       *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
     }
+    /* =========================
+   WHY DAVISAAC
+========================= */
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-top: 38px;
+}
+
+.why-card {
+  background: var(--cream);
+  border: 1px solid var(--line);
+  padding: 28px 24px;
+  min-height: 220px;
+  transition: .25s ease;
+}
+
+.why-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
+}
+
+.why-number {
+  display: block;
+  margin-bottom: 32px;
+  color: var(--leaf);
+  font-size: .75rem;
+  letter-spacing: .1em;
+}
+
+.why-card h3 {
+  margin: 0 0 10px;
+  font: 1.4rem/1.15 var(--serif);
+  color: var(--forest);
+}
+
+.why-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: .92rem;
+}
+
+
+/* =========================
+   PROCESS
+========================= */
+.process-section {
+  background: var(--forest);
+  color: white;
+}
+
+.process-section .eyebrow {
+  color: #b8d2be;
+}
+
+.process-title {
+  max-width: 600px;
+  margin: 12px 0 46px;
+  color: white;
+  font: clamp(2.2rem, 4vw, 3.8rem)/1.05 var(--serif);
+  font-weight: normal;
+}
+
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0;
+}
+
+.process-step {
+  position: relative;
+  padding: 24px 28px 24px 0;
+}
+
+.process-step:not(:last-child)::after {
+  content: "→";
+  position: absolute;
+  right: 10px;
+  top: 44px;
+  color: #90ab96;
+}
+
+.process-number {
+  display: block;
+  color: #9eb7a4;
+  font-size: .72rem;
+  margin-bottom: 22px;
+}
+
+.process-step h3 {
+  margin: 0 0 10px;
+  font: 1.25rem var(--serif);
+}
+
+.process-step p {
+  margin: 0;
+  color: #cfddd2;
+  font-size: .88rem;
+}
+
+
+/* =========================
+   REVIEWS
+========================= */
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  margin-top: 38px;
+}
+
+.review-card {
+  border: 1px solid var(--line);
+  padding: 28px;
+  background: white;
+}
+
+.review-stars {
+  color: #9d7a1c;
+  letter-spacing: .08em;
+  margin-bottom: 18px;
+}
+
+.review-card blockquote {
+  margin: 0 0 24px;
+  font: 1.1rem/1.6 var(--serif);
+  color: var(--forest-deep);
+}
+
+.review-card small {
+  display: block;
+  color: var(--muted);
+}
+
+
+/* =========================
+   WHOLESALE
+========================= */
+.wholesale-box {
+  background: var(--sage);
+  border-left: 3px solid var(--leaf);
+  padding: 46px;
+  display: grid;
+  grid-template-columns: 1.4fr .6fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.wholesale-box h2 {
+  margin: 8px 0 14px;
+  font: clamp(2rem, 4vw, 3rem)/1.08 var(--serif);
+  font-weight: normal;
+  color: var(--forest);
+}
+
+.wholesale-box p {
+  max-width: 620px;
+  color: var(--muted);
+}
+
+.wholesale-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+  padding: 0;
+  margin: 20px 0 0;
+  list-style: none;
+  font-size: .9rem;
+}
+
+.wholesale-list li::before {
+  content: "✓";
+  color: var(--leaf);
+  margin-right: 7px;
+  font-weight: bold;
+}
+
+
+/* =========================
+   FAQ
+========================= */
+.faq-list {
+  margin-top: 38px;
+  border-top: 1px solid var(--line);
+}
+
+.faq-item {
+  border-bottom: 1px solid var(--line);
+}
+
+.faq-question {
+  width: 100%;
+  border: 0;
+  background: transparent;
+  padding: 24px 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  text-align: left;
+  cursor: pointer;
+  color: var(--forest);
+  font-weight: 650;
+}
+
+.faq-icon {
+  font-size: 1.3rem;
+  transition: transform .25s ease;
+}
+
+.faq-answer {
+  max-width: 760px;
+  padding: 0 0 24px;
+  color: var(--muted);
+  display: none;
+}
+
+.faq-item.open .faq-answer {
+  display: block;
+}
+
+.faq-item.open .faq-icon {
+  transform: rotate(45deg);
+}
+
+
+/* =========================
+   GENERAL SECTION HEADINGS
+========================= */
+.section-heading {
+  max-width: 700px;
+}
+
+.section-heading h2 {
+  margin: 10px 0 14px;
+  font: clamp(2.1rem, 4vw, 3.5rem)/1.05 var(--serif);
+  font-weight: normal;
+  color: var(--forest);
+}
+
+.section-heading p {
+  color: var(--muted);
+  margin: 0;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0 22px;
+  background: var(--leaf);
+  color: white;
+  border: 0;
+  cursor: pointer;
+  transition: .2s ease;
+}
+
+.btn-primary:hover {
+  background: var(--forest);
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+@media (max-width: 850px) {
+  .why-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .process-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .process-step {
+    padding: 18px 0;
+    border-bottom: 1px solid rgba(255,255,255,.12);
+  }
+
+  .process-step:not(:last-child)::after {
+    content: "↓";
+    right: 0;
+    top: 24px;
+  }
+
+  .reviews-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .wholesale-box {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 520px) {
+  .why-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .wholesale-box {
+    padding: 30px 24px;
+  }
+                                }
   </style>
 </head>
 <body>
@@ -234,6 +542,64 @@
       </div>
     </section>
 
+    
+    
+<section class="section" id="why-davisaac">
+  <div class="wrap">
+
+    <div class="section-heading">
+      <div class="eyebrow">Why Davisaac</div>
+
+      <h2>Fufu made for the modern kitchen.</h2>
+
+      <p>
+        Familiar Nigerian taste, made more convenient for everyday meals.
+      </p>
+    </div>
+
+    <div class="why-grid">
+
+      <article class="why-card">
+        <span class="why-number">01</span>
+        <h3>Low odour</h3>
+        <p>
+          Enjoy your fufu without the strong smell commonly associated
+          with traditionally processed fufu.
+        </p>
+      </article>
+
+      <article class="why-card">
+        <span class="why-number">02</span>
+        <h3>Easy to prepare</h3>
+        <p>
+          Add to boiling water, stir until smooth and serve with
+          your favourite soup.
+        </p>
+      </article>
+
+      <article class="why-card">
+        <span class="why-number">03</span>
+        <h3>Carefully packaged</h3>
+        <p>
+          Packed to help protect the product and keep it ready
+          for your kitchen.
+        </p>
+      </article>
+
+      <article class="why-card">
+        <span class="why-number">04</span>
+        <h3>Made in Nigeria</h3>
+        <p>
+          A familiar cassava-based Nigerian staple presented in
+          a convenient modern form.
+        </p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+    
     <section class="reasons" aria-label="Why choose Davisaac">
       <div class="wrap reason-row">
         <div class="reason"><span class="reason-index">01</span><div><strong>Zero smell</strong><span>No strong cassava smell in your kitchen.</span></div></div>
@@ -277,6 +643,67 @@
       </div>
     </section>
 
+    <section class="section process-section" id="our-process">
+  <div class="wrap">
+
+    <div class="eyebrow">From cassava to your kitchen</div>
+
+    <h2 class="process-title">
+      Simple food begins with a careful process.
+    </h2>
+
+    <div class="process-grid">
+
+      <div class="process-step">
+        <span class="process-number">01</span>
+        <h3>Cassava</h3>
+        <p>
+          Cassava is selected as the starting point for our fufu.
+        </p>
+      </div>
+
+      <div class="process-step">
+        <span class="process-number">02</span>
+        <h3>Processing</h3>
+        <p>
+          The cassava goes through the necessary preparation
+          and processing stages.
+        </p>
+      </div>
+
+      <div class="process-step">
+        <span class="process-number">03</span>
+        <h3>Preparation</h3>
+        <p>
+          It is processed into a convenient powdered form
+          for easier preparation.
+        </p>
+      </div>
+
+      <div class="process-step">
+        <span class="process-number">04</span>
+        <h3>Packaging</h3>
+        <p>
+          The finished product is carefully packed and prepared
+          for customers.
+        </p>
+      </div>
+
+      <div class="process-step">
+        <span class="process-number">05</span>
+        <h3>Your kitchen</h3>
+        <p>
+          Boil, stir and serve with the soup you love.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+    </section>
+
+    
+
     <section class="section prepare-section" id="how">
       <div class="wrap prepare-layout">
         <div class="prepare-intro">
@@ -293,6 +720,49 @@
         </ol>
       </div>
     </section>
+
+
+<section class="section" id="wholesale">
+  <div class="wrap">
+
+    <div class="wholesale-box">
+
+      <div>
+        <div class="eyebrow">For businesses</div>
+
+        <h2>Want to stock Davisaac?</h2>
+
+        <p>
+          We welcome enquiries from retailers, food vendors,
+          restaurants and other businesses interested in buying
+          Davisaac products in larger quantities.
+        </p>
+
+        <ul class="wholesale-list">
+          <li>Retailers</li>
+          <li>Restaurants</li>
+          <li>Food vendors</li>
+          <li>Supermarkets</li>
+          <li>Bulk buyers</li>
+        </ul>
+      </div>
+
+      <div>
+        <a
+          class="btn-primary"
+          href="https://wa.me/2348056651688?text=Hello%20Davisaac%2C%20I%20would%20like%20to%20make%20a%20bulk%20or%20wholesale%20enquiry."
+          target="_blank"
+          rel="noopener"
+        >
+          Request wholesale price →
+        </a>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+    
 
     <section class="section delivery-section" id="delivery">
       <div class="wrap">
@@ -320,6 +790,112 @@
         </div>
       </div>
     </section>
+
+
+
+<section class="section" id="faq">
+  <div class="wrap">
+
+    <div class="section-heading">
+      <div class="eyebrow">Questions</div>
+
+      <h2>Before you order.</h2>
+
+      <p>
+        Quick answers to some common questions about Davisaac
+        Odourless Fufu Powder.
+      </p>
+    </div>
+
+    <div class="faq-list">
+
+      <div class="faq-item">
+        <button class="faq-question" type="button">
+          <span>What does “odourless fufu” mean?</span>
+          <span class="faq-icon">+</span>
+        </button>
+
+        <div class="faq-answer">
+          Davisaac is processed to reduce the strong characteristic
+          smell commonly associated with traditional fufu while
+          retaining the familiar fufu experience.
+        </div>
+      </div>
+
+
+      <div class="faq-item">
+        <button class="faq-question" type="button">
+          <span>How do I prepare Davisaac Fufu Powder?</span>
+          <span class="faq-icon">+</span>
+        </button>
+
+        <div class="faq-answer">
+          Bring water to a boil, add the required quantity of fufu
+          powder and stir continuously until smooth and properly cooked.
+          Serve with your preferred soup.
+        </div>
+      </div>
+
+
+      <div class="faq-item">
+        <button class="faq-question" type="button">
+          <span>What sizes are available?</span>
+          <span class="faq-icon">+</span>
+        </button>
+
+        <div class="faq-answer">
+          Davisaac Odourless Fufu Powder is currently available in
+          1kg and 2kg packs.
+        </div>
+      </div>
+
+
+      <div class="faq-item">
+        <button class="faq-question" type="button">
+          <span>How should I store it?</span>
+          <span class="faq-icon">+</span>
+        </button>
+
+        <div class="faq-answer">
+          Keep the pack properly sealed and store it in a cool,
+          dry place away from moisture.
+        </div>
+      </div>
+
+
+      <div class="faq-item">
+        <button class="faq-question" type="button">
+          <span>Do you accept bulk orders?</span>
+          <span class="faq-icon">+</span>
+        </button>
+
+        <div class="faq-answer">
+          Yes. Retailers, food vendors, restaurants and other bulk
+          buyers can contact us on WhatsApp to discuss quantities
+          and pricing.
+        </div>
+      </div>
+
+
+      <div class="faq-item">
+        <button class="faq-question" type="button">
+          <span>How do I place an order?</span>
+          <span class="faq-icon">+</span>
+        </button>
+
+        <div class="faq-answer">
+          Fill in the order form on this website and send your
+          order through WhatsApp. We will confirm your order and
+          delivery details with you.
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+    
+    
 
     <section class="section order-section" id="order">
       <div class="wrap">
@@ -440,6 +1016,21 @@
       link.href = "https://wa.me/" + WHATSAPP_NUMBER + "?text=" +
         encodeURIComponent("Hello Davisaac, I have a question about your fufu powder.");
     });
+  </script>
+  <script>
+  document.querySelectorAll(".faq-question").forEach(button => {
+    button.addEventListener("click", () => {
+      const item = button.closest(".faq-item");
+
+      document.querySelectorAll(".faq-item").forEach(otherItem => {
+        if (otherItem !== item) {
+          otherItem.classList.remove("open");
+        }
+      });
+
+      item.classList.toggle("open");
+    });
+  });
   </script>
 </body>
 </html>
