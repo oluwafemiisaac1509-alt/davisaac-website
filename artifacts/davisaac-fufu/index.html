@@ -509,6 +509,17 @@
     padding: 30px 24px;
   }
                                 }
+
+
+        /* Party souvenirs */
+    .events-section { background: var(--sage); }
+    .events-layout { display: grid; gap: 30px; align-items: start; }
+    .events-copy p { margin: 0 0 14px; color: var(--muted); }
+    .events-copy p:first-of-type { color: var(--forest); font-size: 1.09rem; }
+    .events-copy ul { margin: 0; padding-left: 20px; color: var(--muted); }
+    .events-copy li { margin-bottom: 6px; }
+    @media (min-width: 860px) { .events-layout { grid-template-columns: 1fr 1fr; gap: 56px; } }
+    
   </style>
 </head>
 <body>
@@ -520,6 +531,7 @@
         <a href="#products">Products</a>
         <a href="#how">How to prepare</a>
         <a href="#delivery">Delivery</a>
+        <a href="#events">Party souvenirs</a>
         <a href="#about">About</a>
         <a href="#order">Order</a>
       </nav>
@@ -945,7 +957,51 @@
   </div>
     </section>
     
-    
+        <section class="section events-section" id="events">
+      <div class="wrap">
+        <div class="events-layout">
+          <div class="events-copy">
+            <div class="eyebrow">For parties and events</div>
+            <h2>Hosting a party? Order souvenirs.</h2>
+            <p>We also make party souvenirs, so anyone hosting an event can order from us in one go.</p>
+            <p>Tell us your event date and how many pieces you need. We will reply on WhatsApp with a quote.</p>
+            <ul>
+              <li>Weddings, birthdays, naming ceremonies and other events</li>
+              <li>Order early so we can have everything ready before your date</li>
+            </ul>
+          </div>
+          <form class="order-form" id="eventForm">
+            <div class="field">
+              <label for="eventName">Your name</label>
+              <input type="text" id="eventName" autocomplete="name" required>
+            </div>
+            <div class="field">
+              <label for="eventType">Type of event</label>
+              <select id="eventType">
+                <option>Wedding</option>
+                <option>Birthday</option>
+                <option>Naming ceremony</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="eventDate">Event date</label>
+              <input type="date" id="eventDate" required>
+            </div>
+            <div class="field">
+              <label for="eventQty">How many pieces?</label>
+              <input type="number" id="eventQty" min="1" placeholder="For example 50" required>
+            </div>
+            <div class="field">
+              <label for="eventNote">Anything else? (optional)</label>
+              <textarea id="eventNote" rows="3" placeholder="Your area, what you have in mind"></textarea>
+            </div>
+            <button type="submit" class="button button-primary">Request a quote on WhatsApp <span aria-hidden="true">&nbsp;→</span></button>
+            <p class="form-note">This opens WhatsApp with your request already written. Just press send.</p>
+          </form>
+        </div>
+      </div>
+    </section>
 
     <section class="section order-section" id="order">
       <div class="wrap">
@@ -1061,6 +1117,24 @@
       window.location.href = url;
     });
 
+        // Party souvenir quote request
+    (function () {
+      const dateInput = document.getElementById("eventDate");
+      dateInput.min = new Date().toISOString().slice(0, 10);
+      document.getElementById("eventForm").addEventListener("submit", function (event) {
+        event.preventDefault();
+        const qty = Math.max(1, parseInt(document.getElementById("eventQty").value, 10) || 1);
+        const note = document.getElementById("eventNote").value.trim();
+        let message = "Hello Davisaac, I would like party souvenirs.\n" +
+          "Name: " + document.getElementById("eventName").value.trim() + "\n" +
+          "Event: " + document.getElementById("eventType").value + "\n" +
+          "Event date: " + dateInput.value + "\n" +
+          "Number of pieces: " + qty;
+        if (note) message += "\nNote: " + note;
+        window.location.href = "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(message);
+      });
+    })();
+    
     // Direct "chat with us" links use the same WhatsApp number
     document.querySelectorAll("[data-chat]").forEach(function (link) {
       link.href = "https://wa.me/" + WHATSAPP_NUMBER + "?text=" +
