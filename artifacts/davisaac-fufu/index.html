@@ -963,11 +963,12 @@
           <div class="events-copy">
             <div class="eyebrow">For parties and events</div>
             <h2>Hosting a party? Order souvenirs.</h2>
-            <p>We also make party souvenirs, so anyone hosting an event can order from us in one go.</p>
-            <p>Tell us your event date and how many pieces you need. We will reply on WhatsApp with a quote.</p>
+            <p>Give your guests something they will actually use. Our Odourless Fufu Powder 1kg pack makes a souvenir that guests take home and enjoy.</p>
+            <p><strong>₦1,500 per piece.</strong> Tell us your event date and how many pieces you need, and we will confirm on WhatsApp.</p>
             <ul>
               <li>Weddings, birthdays, naming ceremonies and other events</li>
-              <li>Order early so we can have everything ready before your date</li>
+              <li>Please order at least 5 days before your event, so we can prepare it in time</li>
+              <li>You can add your own tag or label to the packs yourself</li>
             </ul>
           </div>
           <form class="order-form" id="eventForm">
@@ -1117,10 +1118,12 @@
       window.location.href = url;
     });
 
-        // Party souvenir quote request
+    // Party souvenir order request
     (function () {
       const dateInput = document.getElementById("eventDate");
-      dateInput.min = new Date().toISOString().slice(0, 10);
+      const earliest = new Date();
+      earliest.setDate(earliest.getDate() + 5);
+      dateInput.min = earliest.toISOString().slice(0, 10);
       document.getElementById("eventForm").addEventListener("submit", function (event) {
         event.preventDefault();
         const qty = Math.max(1, parseInt(document.getElementById("eventQty").value, 10) || 1);
@@ -1129,12 +1132,12 @@
           "Name: " + document.getElementById("eventName").value.trim() + "\n" +
           "Event: " + document.getElementById("eventType").value + "\n" +
           "Event date: " + dateInput.value + "\n" +
-          "Number of pieces: " + qty;
+          "Pieces (1kg pack at ₦1,500 each): " + qty + "\n" +
+          "Total: ₦" + (qty * 1500).toLocaleString();
         if (note) message += "\nNote: " + note;
         window.location.href = "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(message);
       });
-    })();
-    
+    })();    
     // Direct "chat with us" links use the same WhatsApp number
     document.querySelectorAll("[data-chat]").forEach(function (link) {
       link.href = "https://wa.me/" + WHATSAPP_NUMBER + "?text=" +
